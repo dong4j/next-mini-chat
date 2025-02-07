@@ -19,7 +19,7 @@
 | OPENAI_BASE_URL | openai API Base地址 | https://models.inference.ai.azure.com |
 | OPENAI_API_KEY  | API 密钥            | ghp\_**\***                           |
 | OPENAI_MODEL    | 选用模型            | **默认**：gpt-4o-mini                 |
-| SITE_TITLE      | 站点名称            | Hamster1963's Chatbot                 |
+| SITE_TITLE      | 站点名称            | dong4j's Chatbot                 |
 | SITE_USERNAME   | 用户名              | trio                                  |
 | SITE_PASSWORD   | 密码                | pleasechangeme                        |
 

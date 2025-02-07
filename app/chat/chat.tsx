@@ -44,15 +44,19 @@ export default function Chat() {
 
   return (
     <>
-      <MessageArea messages={messages} />
-      {loading && (
-        <AnimatedShinyText className="ml-0 text-sm">
-          Processing...
-        </AnimatedShinyText>
-      )}
-      <div ref={messagesEndRef} />
+      <div className="pb-36 sm:px-15 sm:pt-6">
+        <MessageArea messages={messages} />
+        <div ref={messagesEndRef} />
+      </div>
+      <div className="fixed bottom-[200px] left-0 right-0 mx-auto w-full max-w-5xl px-4 sm:px-14">
+        {loading && (
+          <AnimatedShinyText className="ml-0 text-sm">
+            Processing...
+          </AnimatedShinyText>
+        )}
+      </div>
       <form
-        className="relative"
+        className="fixed bottom-20 left-0 right-0 mx-auto w-full max-w-5xl px-4 sm:px-14"
         ref={formRef}
         onSubmit={async (e) => {
           e.preventDefault()
@@ -87,30 +91,32 @@ export default function Chat() {
           }
         }}
       >
-        <textarea
-          aria-label="Your message"
-          placeholder="Message... (Shift+Enter to submit)"
-          name="entry"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={handleKeyDown}
-          required
-          className="mb-4 mt-2 block min-h-[60px] w-full resize-none rounded-lg border-neutral-300 bg-neutral-100 py-4 pl-4 pr-32 text-[14px] text-neutral-900 placeholder-neutral-400 outline-none dark:bg-neutral-800 dark:text-neutral-100"
-          rows={3}
-        />
-        <SubmitButton loading={loading} />
-        {messages.length > 0 && (
-          <button
-            type="button"
-            onClick={() => {
-              setMessages([])
-              localStorage.removeItem('chatMessages')
-            }}
-            className="txt-compact-small-plus absolute bottom-2 left-2 inline-flex w-fit items-center justify-center gap-x-1 overflow-hidden rounded-md bg-red-500 px-1 py-0.5 text-[12px] text-ui-fg-on-inverted outline-none transition-fg after:button-inverted-gradient hover:after:button-inverted-hover-gradient active:after:button-inverted-pressed-gradient after:absolute after:inset-0 after:transition-fg after:content-[''] hover:bg-red-400 focus-visible:!shadow-buttons-inverted-focus active:bg-ui-button-inverted-pressed disabled:border-ui-border-base disabled:bg-ui-bg-disabled disabled:text-ui-fg-disabled disabled:shadow-buttons-neutral disabled:after:hidden dark:text-white"
-          >
-            Clear
-          </button>
-        )}
+        <div className="relative bg-neutral-100 dark:bg-neutral-800 rounded-lg">
+          <textarea
+            aria-label="Your message"
+            placeholder="Message... (Shift+Enter to submit)"
+            name="entry"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={handleKeyDown}
+            required
+            className="mb-4 mt-2 block min-h-[60px] w-full resize-none rounded-lg border-neutral-300 bg-neutral-100 py-4 pl-4 pr-32 text-[14px] text-neutral-900 placeholder-neutral-400 outline-none dark:bg-neutral-800 dark:text-neutral-100"
+            rows={3}
+          />
+          <SubmitButton loading={loading} />
+          {messages.length > 0 && (
+            <button
+              type="button"
+              onClick={() => {
+                setMessages([])
+                localStorage.removeItem('chatMessages')
+              }}
+              className="txt-compact-small-plus absolute bottom-2 left-2 inline-flex w-fit items-center justify-center gap-x-1 overflow-hidden rounded-md bg-red-500 px-1 py-0.5 text-[12px] text-ui-fg-on-inverted outline-none transition-fg after:button-inverted-gradient hover:after:button-inverted-hover-gradient active:after:button-inverted-pressed-gradient after:absolute after:inset-0 after:transition-fg after:content-[''] hover:bg-red-400 focus-visible:!shadow-buttons-inverted-focus active:bg-ui-button-inverted-pressed disabled:border-ui-border-base disabled:bg-ui-bg-disabled disabled:text-ui-fg-disabled disabled:shadow-buttons-neutral disabled:after:hidden dark:text-white"
+            >
+              Clear
+            </button>
+          )}
+        </div>
       </form>
     </>
   )
