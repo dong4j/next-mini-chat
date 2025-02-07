@@ -85,7 +85,7 @@ export default function Chat() {
               )
             }
           } catch (error) {
-            alert(error)
+            alert('Service is unavailable, will be restored shortly.')
           } finally {
             setLoading(false)
           }

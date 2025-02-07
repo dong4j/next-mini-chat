@@ -3,8 +3,8 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev -p 3051",
-    "start": "next start"
+    "dev": "next dev -p 6599",
+    "start": "next start -p 6599"
   },
   "prettier": {
     "plugins": [

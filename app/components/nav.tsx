@@ -11,7 +11,7 @@ import { HomeIcon, SparklesIcon } from '@heroicons/react/20/solid'
 export const siteUrlList = [
   {
     name: 'Home',
-    url: '/',
+    url: 'https://home.dong4j.site',
     icon: HomeIcon,
   },
   {

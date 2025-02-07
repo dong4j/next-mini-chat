@@ -49,6 +49,9 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
+      <head>
+        <script defer src="https://cdn.dong4j.site/source/static/umami.self.js" data-host-url="https://umami.dong4j.ink:1024" data-website-id="535dd6b5-bcd9-461a-938a-9c7a7a637c96"></script>
+      </head>
       <body className="relative mx-4 mb-28 mt-8 flex max-w-5xl flex-col antialiased sm:mx-auto md:flex-row">
         <main className="mt-6 flex min-w-0 flex-auto flex-col px-2 md:px-0">
           {children}

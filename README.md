@@ -1,29 +1,33 @@
-<h1 align="center">Next-Mini-Chat</h1>
+# Next-Mini-Chat
 
-<h3 align="center">Next-Mini-Chat 是一个基于 Next.js 的极致精简 Chat 页面</h3>
-<h4 align="center">使用 Server Action 与中间件身份认证保证安全</h4>
+一个简单的 AI 对话机器人, 修改自 [Next-Mini-Chat](https://github.com/hamster1963/Next-Mini-Chat)
 
-![Next-Mini-Chat](./chat.jpeg)
+## 改动
 
-### 一键部署到 Vercel
+1. 删除了认证, 只要接入可用的 API, 随便使用;
+2. 修改了部分样式;
 
-[编写中...](https://buycoffee.top/blog)
+## 使用
 
-- **Framework**: [Next.js](https://nextjs.org/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
+```bash
+bun install
+bun run dev
+```
 
-#### 环境变量
+## 服务器部署
 
-| 变量名          | 含义                | 示例                                  |
-| --------------- | ------------------- | ------------------------------------- |
-| OPENAI_BASE_URL | openai API Base地址 | https://models.inference.ai.azure.com |
-| OPENAI_API_KEY  | API 密钥            | ghp\_**\***                           |
-| OPENAI_MODEL    | 选用模型            | **默认**：gpt-4o-mini                 |
-| SITE_TITLE      | 站点名称            | dong4j's Chatbot                 |
-| SITE_USERNAME   | 用户名              | trio                                  |
-| SITE_PASSWORD   | 密码                | pleasechangeme                        |
+```bash
+# 上传文件到服务器, 需要修改上传地址等
+./deploy.sh
+# 服务器需要安装依赖并编译
+bun install
+bun build
+```
 
-<br>
+`package.json` 中修改端口.
 
-![screen-shot-one](./shotOne.jpeg)
-![screen-shot-two](./shotTwo.jpeg)
+## 使用 pm2 部署
+
+```bash
+pm2 start ecosystem.config.js
+```
