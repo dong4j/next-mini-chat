@@ -49,7 +49,7 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="relative mx-4 mb-28 mt-8 flex max-w-2xl flex-col antialiased sm:mx-auto md:flex-row">
+      <body className="relative mx-4 mb-28 mt-8 flex max-w-5xl flex-col antialiased sm:mx-auto md:flex-row">
         <main className="mt-6 flex min-w-0 flex-auto flex-col px-2 md:px-0">
           {children}
           <Nav />
