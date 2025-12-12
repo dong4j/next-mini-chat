@@ -10,7 +10,7 @@ module.exports = {
         version: '1.0.0', // 应用版本
         script: '/bin/bash', // 通过 bash 执行命令，避免路径问题
         args: '-c "npm run start"', // 通过 bash 执行 npm run start
-        cwd: '/mnt/4.860.ssd/next-mini-chat',
+        cwd: '/Users/dong4j/Developer/Blog/next-mini-chat',
         exec_mode: "fork",
         instances: 1, // 应用实例数量
         autorestart: true, // 自动重启

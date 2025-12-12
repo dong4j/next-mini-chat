@@ -6,8 +6,8 @@ SCRIPT_DIR=$(dirname "$(realpath "$0")")
 cd "$SCRIPT_DIR" || exit 1
 
 # 设置默认值
-DEFAULT_SSH_ALIAS="m920x.d"
-DEFAULT_REMOTE_DIR="/mnt/4.860.ssd/next-mini-chat"
+DEFAULT_SSH_ALIAS="m2"
+DEFAULT_REMOTE_DIR="/Users/dong4j/Developer/Blog/next-mini-chat"
 DEFAULT_LOCAL_DIR="."
 
 # 检查参数，如果未提供则使用默认值
